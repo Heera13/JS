@@ -3,25 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check the login</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
-        let visitor=propmt('Who is there?','');
-        if (visitor=="Admin") {
-            let password =prompt('Password?','');
-            if (password=="TheMaster") {
-                alert('Welcome!');
-            }else if (password==""||password==null){
-                alert('Canceled');
-            }else{
-                alert('Wrong password');
-            }
-        }else if(visitor==""||visitor==null){
-            alert('Canceled');
-        }else{
-            alert('I dont know you');
-        }
+        if (-1 || 0) alert( 'first' ); //will run since -1 is truthy
+        if (-1 && 0) alert( 'second' );//not run since 0 is falsy
+        if (null || -1 && 1) alert( 'third' );//will run (null||1) =1 truthy
     </script>
 </body>
 </html>
