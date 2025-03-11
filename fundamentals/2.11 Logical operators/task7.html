@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        if (-1 || 0) alert( 'first' ); //will run since -1 is truthy
+        if (-1 && 0) alert( 'second' );//not run since 0 is falsy
+        if (null || -1 && 1) alert( 'third' );//will run (null||1) =1 truthy
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        alert( null || 2 || undefined ); //2 since its the first truthy value
+        alert( alert(1) || 2 || alert(3) ); // 1 and then 2 since alert is undefined and 2 is the first truthy value
+        alert( 1 && null && 2 );//null since it is the first faulty value
+        alert( alert(1) && alert(2) )//1 and undefined
+        alert( null || 2 && 3 || 4 ); //3 && has higher priority so it will become alert(null||3||4);returns 3 since it is the first truthy value
+        if (age >= 14 && age <= 90);
+        // task6
+        if (!(age >= 14 && age <= 90));
+        if (age < 14 || age > 90);
+    </script>
+</body>
+</html>
