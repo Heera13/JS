@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function Calculator() {
+
+this.read = function() {
+  this.a = +prompt('a?', 0);//Input first number and convert into number
+  this.b = +prompt('b?', 0);//Input first number and convert into number
+};
+
+this.sum = function() {
+  return this.a + this.b;//function to find the sum of numbers
+};
+
+this.mul = function() {
+  return this.a * this.b;//function to find the product of numbers
+};
+}
+
+let calculator = new Calculator();//create new object(constructor)
+calculator.read();//reads the input
+alert( "Sum=" + calculator.sum() );//display sum
+alert( "Mul=" + calculator.mul() );//display product
+</script>
+</body>
+</html>

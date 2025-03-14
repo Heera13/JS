@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ function Accumulator(startingValue) {
+  this.value = startingValue;//sets starting value
+
+  this.read = function() {
+    this.value += +prompt('How much to add?', 0);//read user input and add to current value
+  };
+
+}
+
+let accumulator = new Accumulator(1);//accumulator with initial value set to 1
+accumulator.read();//input from user and gets added
+accumulator.read();//second input from user and gets added
+alert(accumulator.value);//display sum  
+</script>
+</body>
+</html>
