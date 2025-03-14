@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+    };
+
+    multiplyNumeric(menu);
+            function multiplyNumeric(obj) {
+
+        for (let key in obj) {//Loop through all own enumerable properties of the object
+            if (typeof obj[key] == 'number') {//if the property's value is a number it gets multiplied by 2
+            obj[key] *= 2;
+            }
+        }
+        }
+   </script> 
+</body>
+</html>
