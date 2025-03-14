@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//     function makeUser() {
+//   return {
+//     name: "John",
+//     ref: this
+//   };
+// }
+
+// let user = makeUser();
+
+// alert( user.ref.name ); // What's the result?--> Error since value of this is not defined in makeUser()
+function makeUser() {
+  return {
+    name: "John",
+    ref() { //ref is a method
+      return this;
+    }
+  };
+}
+
+let user = makeUser();//The function returns an object and assigns it to user
+
+alert( user.ref().name ); // John
+</script>
+</body>
+</html>
