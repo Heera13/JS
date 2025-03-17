@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function randomInteger(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min; 
+} 
+alert( randomInteger(1, 5) );
+alert( randomInteger(1, 5) );
+alert( randomInteger(1, 5) );
+//Multiplying by (max - min + 1) ensures the range includes max
+//Math.floor() rounds down to the nearest whole number
+//Adding min shifts the number into the correct range
+</script>    
+</body>
+</html>

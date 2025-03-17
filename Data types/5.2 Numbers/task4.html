@@ -7,9 +7,10 @@
 </head>
 <body>
 <script>
-let a = +prompt("The first number?", "");//unary + will convert the unput to number
-let b = +prompt("The second number?", "");
-alert( a + b ); //display sum
-</script>  
+    let i = 0;
+while (i != 10) {
+  i += 0.2; // loop will be infinite as i will never be equal to 10 due to precision losses
+}
+</script>    
 </body>
 </html>
