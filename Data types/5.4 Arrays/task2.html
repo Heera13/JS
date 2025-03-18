@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ let styles=["Jazz","Blues"]; //Jazz, Blues
+  styles.push("Rock-n-Roll");  
+  alert(styles);//Jazz, Blues, Rock-n-Roll
+  let middleIndex=Math.floor(styles.length / 2) //ensures that it works for any arrays of odd length
+  styles[middleIndex] = "Classics"; 
+  alert(styles);//Jazz, Classics, Rock-n-Roll
+  alert(styles.shift());
+  alert(styles);//Jazz
+  styles.unshift("Rap", "Reggae"); 
+  alert(styles); //Rap, Reggae, Classics, Rock-n-Roll
+</script>    
+</body>
+</html>

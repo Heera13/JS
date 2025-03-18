@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let arr = ["a", "b"];
+
+arr.push(function() { //push function inside array
+  alert( this );
+});
+arr[2]();  //Output:a,b,function() {
+           //alert( this );}
+
+
+//arr[2] refers to the function we just added.
+//When we call it with arr[2](), the function executes.
+//Inside the function, this refers to arr (the object it's stored in).
+//So, alert(this) shows the entire array.
+</script>   
+</body>
+</html>

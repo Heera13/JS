@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function sumInput() {
+        let sum=0;//initialize sum
+        let arr=[];//initialize empty array
+        while (true) {//infinite loop
+            let input = prompt("A number please?",`0`) ;
+            if (input === "" || input === null || isNaN(input)) {//if input is not number,empty string or null break
+            break;
+        }
+        arr.push(Number(input));//converts input to number and pushes to array
+        }
+        for (let num of arr) {
+        sum += num;//computes sum
+    }
+    return sum;
+    }
+    alert(sumInput());//display sum
+</script>    
+</body>
+</html>
