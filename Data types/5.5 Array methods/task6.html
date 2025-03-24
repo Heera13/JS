@@ -7,7 +7,34 @@
 </head>
 <body>
 <script>
+function Calculator() {
+this.methods= {  //operators aee sttored in object called methods
+"+":(a,b)=> a-b,
+"-": (a, b) => a-b
+};
+this.calculate = function(str) {
+  let split = str.split(' '),//splits the string into 3 parts
+      a = +split[0],
+      op = split[1],
+      b = +split[2];
 
+  if (!this.methods[op] || isNaN(a) || isNaN(b)) {//checks if the operator is in methods and if a and b are numbers
+    return NaN;
+  }
+
+  return this.methods[op](a, b);
+};
+this.addMethod = function(name, func) {
+    this.methods[name] = func;//adds new operations to method object
+  };
+}
+let powerCalc = new Calculator;
+powerCalc.addMethod("*", (a, b) => a * b);
+powerCalc.addMethod("/", (a, b) => a / b);
+powerCalc.addMethod("**", (a, b) => a ** b);
+
+let result = powerCalc.calculate("2 ** 3");
+alert( result ); // 8
 </script>
 </body>
 </html>
