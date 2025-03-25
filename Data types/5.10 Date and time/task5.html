@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function getSecondsToday() {
+    function getSecondsToday() {
+  let now = new Date();
+  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());//creates a date object with year, month, and day from now, but with time set to 00:00:00 (midnight).
+  let diff = now - today;//finds diff in milliseconds
+  return Math.round(diff / 1000); //
+}
+
+alert( getSecondsToday() );
+}
+</script>    
+</body>
+</html>
