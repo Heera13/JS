@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function topSalary(salaries) {
+        let maxSalary = 0;// To keep track of the highest salary
+        let maxName = null; // To store the name of the person with the highest salary
+
+        for(const [name, salary] of Object.entries(salaries)) {// Loop through each name and salary pair
+            if (maxSalary < salary) {
+            maxSalary = salary;
+            maxName = name;
+            }
+        }
+
+      return maxName;// Return the name of the person with the highest salary
+    }
+        let salaries = {
+        "John": 100,
+        "Pete": 300,
+        "Mary": 250
+        };
+        alert(topSalary(salaries));//Pete
+</script>    
+</body>
+</html>
