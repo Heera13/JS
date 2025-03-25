@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function aclean(arr) {
+  let obj = {};//Create an empty object obj
+
+  for (let i = 0; i < arr.length; i++) {
+    let sorted = arr[i].toLowerCase().split("").sort().join("");
+    obj[sorted] = arr[i];
+  }
+
+  return Object.values(obj);//Return all stored values from obj now free of duplicates.
+}
+let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+alert( aclean(arr) ); // "nap,teachers,ear" or "PAN,cheaters,era"
+
+// Convert each word to lowercase to avoid case differences.
+// Sort its letters alphabetically (e.g., "nap" → "anp", "PAN" → "anp").
+// Use the sorted version as a key in obj, storing the original word as its value.
+// Since object keys are unique, only one word per anagram group remains.
+</script>  
+</body>
+</html>
