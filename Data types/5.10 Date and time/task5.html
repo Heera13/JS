@@ -7,16 +7,11 @@
 </head>
 <body>
 <script>
-function getSecondsToday() {
-    function getSecondsToday() {
-  let now = new Date();
-  let today = new Date(now.getFullYear(), now.getMonth(), now.getDate());//creates a date object with year, month, and day from now, but with time set to 00:00:00 (midnight).
-  let diff = now - today;//finds diff in milliseconds
-  return Math.round(diff / 1000); //
+function getLastDayOfMonth(year, month) {
+    let date = new Date(year, month + 1, 0);//day=0 means last day of the previous month
+    return date.getDate();//returns last day(number)
 }
-
-alert( getSecondsToday() );
-}
-</script>    
+alert(getLastDayOfMonth(2012, 1))//29
+</script>
 </body>
 </html>

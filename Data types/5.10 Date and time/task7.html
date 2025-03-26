@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function getSecondsToTomorrow() {
+  let now = new Date();
+  let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);//new date object for tomorrow
+  let diff = tomorrow - now; // difference in ms
+  return Math.round(diff / 1000); // convert to seconds
+}   
+alert(getSecondsToTomorrow())//50238 time now is 10:02 AM
+</script>    
+</body>
+</html>
