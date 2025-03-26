@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+//using loop
+function printList(list) {
+  let tmp = list;//starts at the first node
+
+  while (tmp) {//while there is a node
+    alert(tmp.value);
+    tmp = tmp.next;//move to next node
+  }
+
+}
+
+printList(list);
+//using recursion
+function printList(list) {
+
+alert(list.value); // Output the current node’s value
+
+if (list.next) {
+  printList(list.next); // // Call the function again with the next node
+}
+
+}
+
+printList(list);
+</script>
+</body>
+</html>

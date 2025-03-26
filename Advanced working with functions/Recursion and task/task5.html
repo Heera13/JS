@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+let list = {
+  value: 1,
+  next: {
+    value: 2,
+    next: {
+      value: 3,
+      next: {
+        value: 4,
+        next: null
+      }
+    }
+  }
+};
+//using loop
+function printReverseList(list) {
+  let arr = [];
+  let tmp = list;
+//Store all values in the array
+  while (tmp) {
+    arr.push(tmp.value);
+    tmp = tmp.next;
+  }
+//Print values in reverse order
+  for (let i = arr.length - 1; i >= 0; i--) {
+    alert( arr[i] );// Print from the last to the first element
+  }
+}
+
+printReverseList(list);
+//using recursion
+function printReverseList(list) {
+  if (list.next) {  
+    printReverseList(list.next); // Move to the next node first
+  }
+
+  alert(list.value); // Print the value after reaching the last node
+}
+
+printReverseList(list);
+
+</script>
+</body>
+</html>
