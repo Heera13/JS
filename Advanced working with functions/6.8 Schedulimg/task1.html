@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    //using setInterval
+    function printNumbers(from, to) {
+  let current = from;
+
+  let timerId = setInterval(function() {
+    alert(current); 
+    if (current == to) {
+      clearInterval(timerId); // Stop when we reach `to`
+    }
+    current++; // Move to the next number
+  }, 1000);//every 1s setInterval calls the function
+}
+
+printNumbers(5, 10);
+
+//using setTimeout
+function printNumbers(from, to) {
+  let current = from;
+
+  setTimeout(function go() {
+    alert(current);
+    if (current < to) {
+      setTimeout(go, 1000); // Schedule the next call manually if 'to' not reached
+    }
+    current++;
+  }, 1000);
+}
+
+printNumbers(5, 10);
+</script>    
+</body>
+</html>
