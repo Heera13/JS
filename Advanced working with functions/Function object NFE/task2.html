@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function sum(a) {
+
+let currentSum = a;
+
+function f(b) {
+  currentSum += b;
+  return f;
+}
+
+f.toString = function() {  //to show currentSum instead of the function itself
+  return currentSum;
+};
+
+return f;
+}
+
+alert( sum(1)(2) ); // 3
+alert( sum(0)(1)(2)(3)(4)(5) ); // 15
+</script>    
+</body>
+</html>
