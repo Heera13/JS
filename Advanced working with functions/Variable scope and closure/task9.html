@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+function byField(fieldName) {
+    function byField(fieldName){
+  return (a, b) => a[fieldName] > b[fieldName] ? 1 : -1;
+}
+}
+let users = [
+  { name: "John", age: 20, surname: "Johnson" },
+  { name: "Pete", age: 18, surname: "Peterson" },
+  { name: "Ann", age: 19, surname: "Hathaway" }
+];
+users.sort(byField('name'));
+users.sort(byField('age'));
+//It returns a comparator function (a, b), which Compares a[fieldName] and b[fieldName]
+
+//Returns 1 if a[fieldName] is greater (moves a after b).
+
+//Returns -1 otherwise (keeps a before b).
+</script>    
+</body>
+</html>
